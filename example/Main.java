@@ -1,15 +1,12 @@
-import core.Controller;
-import controllers.HomeController;
+package example;
 
+import example.controllers.EventoController;
+import example.views.EventoView;
 
-/**
- * Main class. Responsible for running the application.
- */
-public class Main 
-{
-	public static void main(String[] args) 
-	{
-		Controller c = new HomeController();
-		c.run();
-	}
+public class Main {
+    public static void main(String[] args) {
+        EventoController controller = new EventoController();
+        EventoView view = new EventoView(controller);
+        view.setVisible(true);
+    }
 }
